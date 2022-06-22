@@ -9,7 +9,7 @@ namespace Api.Models.Request
 
         public static implicit operator User(CreateUserRequest request)
         {
-            if(request == null) 
+            if(request is null) 
                 return null;
 
             return new User

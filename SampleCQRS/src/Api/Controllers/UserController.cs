@@ -1,6 +1,7 @@
 ﻿using Api.Models.Request;
 using Api.Models.Response;
 using Application.Commands;
+using Application.Query;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

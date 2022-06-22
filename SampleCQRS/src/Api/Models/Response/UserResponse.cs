@@ -10,7 +10,7 @@ namespace Api.Models.Response
 
         public static implicit operator UserResponse(User user)
         {
-            if (user == null)
+            if (user is null)
                 return null;
 
             return new UserResponse
