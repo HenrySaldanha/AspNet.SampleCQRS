@@ -31,7 +31,7 @@ It is very important that we do not forget to implement the class **IRequest** a
 
 
 ## Handler class implementation
-The handler needs to implement the **IRequestHandler** interface and we need to set the input and output objects of the handler, in my case the input is the **CreateUserCommand** and the output is **User**.
+The handler **CreateUserHandler** needs to implement the **IRequestHandler** interface and we need to set the input and output objects of the handler, in my case the input is the **CreateUserCommand** and the output is **User**.
 
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, User>
     {
