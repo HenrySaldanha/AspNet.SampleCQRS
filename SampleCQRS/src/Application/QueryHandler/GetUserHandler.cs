@@ -11,7 +11,7 @@ namespace Application.QueryHandler
             var user = new User
             {
                 Document = "12312312312",
-                Id = Guid.NewGuid(),
+                Id = request.Id,
                 Name = "Full Name"
             };
 
