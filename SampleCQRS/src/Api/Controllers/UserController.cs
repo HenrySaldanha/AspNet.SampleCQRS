@@ -25,7 +25,7 @@ namespace Api.Controllers
         {
             UserResponse user = await _mediator.Send(new CreateUserCommand(userRequest));
 
-            if (user == null)
+            if (user is null)
                 return BadRequest();
 
             return Created(nameof(CreateUserAsync), user);
