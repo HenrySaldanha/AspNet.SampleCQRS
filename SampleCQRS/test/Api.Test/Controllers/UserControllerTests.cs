@@ -1,5 +1,6 @@
 ﻿using Api.Models.Request;
 using Application.Commands;
+using Application.Query;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 

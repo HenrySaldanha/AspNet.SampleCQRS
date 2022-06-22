@@ -1,7 +1,7 @@
 ﻿using Domain.Entities;
 using MediatR;
 
-namespace Application.Commands
+namespace Application.Query
 {
     public class GetUserQuery : IRequest<User>
     {

@@ -1,8 +1,8 @@
-﻿using Application.Commands;
+﻿using Application.Query;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Handlers
+namespace Application.QueryHandler
 {
     public class GetUserHandler : IRequestHandler<GetUserQuery, User>
     {
