@@ -17,11 +17,16 @@ namespace Api.Controllers
         /// <param name="userRequest"> Represents the new user to be created </param>
         [HttpPost]
         [ProducesResponseType(typeof(UserResponse), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> CreateUserAsync(
             [FromServices] IMediator _mediator,
             [FromBody] CreateUserRequest userRequest)
         {
             UserResponse user = await _mediator.Send(new CreateUserCommand(userRequest));
+
+            if (user == null)
+                return BadRequest();
+
             return Created(nameof(CreateUserAsync), user);
         }
 
