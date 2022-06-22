@@ -1,4 +1,5 @@
 using System.Reflection;
+using Application.CommandHandlers;
 using MediatR;
 using Microsoft.OpenApi.Models;
 
@@ -32,6 +33,7 @@ namespace Api
         public static void ConfigureServices(this IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMediatR(typeof(CreateUserHandler).Assembly);
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(
                 c =>
@@ -46,8 +48,7 @@ namespace Api
                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                     c.IncludeXmlComments(xmlPath);
                 });
-
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            
         }
     }
 }
