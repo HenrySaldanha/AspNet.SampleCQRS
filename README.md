@@ -1,10 +1,10 @@
-This repository aims to present a simple implementation of the CQRS pattern using MediatR.
+This repository aims to present a simple implementation of the **CQRS** pattern using **MediatR**.
 
 ## Settings
 
 In my **Program** class I added the following code snippets:
    
-The **AddMediatR** function is responsible for setting the MediatR dependency injection into the solution.
+The **AddMediatR** function is responsible for setting the **MediatR** dependency injection into the solution.
 The parameter must be some object in the project where there are implementations of commands, queries and notifications.
 
     public static void ConfigureServices(this IServiceCollection services)
@@ -31,7 +31,7 @@ It is very important that we do not forget to implement the class **IRequest** a
 
 
 ## Handler class implementation
-The handler needs to implement the **IRequestHandler** interface and we need to set the input and output objects of the handler, in my case the input is the **CreateUserCommand** and the output is **User**.
+The handler **CreateUserHandler** needs to implement the **IRequestHandler** interface and we need to set the input and output objects of the handler, in my case the input is the **CreateUserCommand** and the output is **User**.
 
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, User>
     {
@@ -44,7 +44,7 @@ The handler needs to implement the **IRequestHandler** interface and we need to 
 
 
 ## Controller class implementation
-To call the command we need to inject the dependency of the **IMediator** class and then use the **Send()** function passing a command as parameter.
+To invoke the command we need to inject the dependency of the **IMediator** class and then use the **Send()** function passing a command as parameter.
 The **[FromServices]** tag injects a dependency on the **IMediator**.
         
         [HttpPost]
