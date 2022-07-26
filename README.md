@@ -57,12 +57,13 @@ The **[FromServices]** tag injects a dependency on the **IMediator**.
             ...
         }
 
+## Give a Star 
+If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
 
 ## This project was built with
 * [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 * [MediatR](https://www.nuget.org/packages/MediatR/)
 * [Swagger](https://swagger.io/)
-* ~~coffee, pizza and late nights~~
 
 ## My contacts
 * [LinkedIn](https://www.linkedin.com/in/henry-saldanha-3b930b98/)
